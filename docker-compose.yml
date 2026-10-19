@@ -106,6 +106,7 @@ services:
   postgres:
     restart: unless-stopped
     image: pgvector/pgvector:pg16
+    # user/pass/lingjing 是本机 Compose 默认账号，不是生产口令。改动需与 api 的 DATABASE_URL 保持一致。
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=pass
