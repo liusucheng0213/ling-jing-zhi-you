@@ -4,7 +4,24 @@ import unittest
 import uuid
 from unittest.mock import AsyncMock, patch
 
+from fakeredis.aioredis import FakeRedis
+
 from app.api.v1.system import _check_avatar_ws_probe_leased
+
+
+class _AsyncNullLock:
+    """这些测试是单任务顺序执行，不验证 Redis 锁脚本。"""
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc, tb):
+        return False
+
+
+class _LeaseRedis(FakeRedis):
+    def lock(self, *args, **kwargs):
+        return _AsyncNullLock()
 from app.core.avatar_channel import (
     ADMIN_LEASE_TTL_MS,
     CHANNEL_COOLDOWN_MS,
@@ -17,7 +34,8 @@ class AvatarChannelCoordinatorTests(unittest.IsolatedAsyncioTestCase):
     async def asyncSetUp(self) -> None:
         self.now_ms = 1_800_000_000_000
         self.coordinator = AvatarChannelCoordinator(
-            namespace=f"lingjing:test:avatar-channel:{uuid.uuid4().hex}"
+            redis=_LeaseRedis(decode_responses=True),
+            namespace=f"lingjing:test:avatar-channel:{uuid.uuid4().hex}",
         )
         self.coordinator._now_ms = lambda: self.now_ms  # type: ignore[method-assign]
         await self.coordinator.clear()
