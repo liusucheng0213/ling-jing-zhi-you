@@ -1,0 +1,701 @@
+/* ============================================
+   灵境智游 - 全局样式
+   禅意山水主题：柔和钢蓝主色 + 暖金点缀（低饱和）
+   ============================================ */
+
+/* CSS 变量定义 */
+:root {
+  /* 主色调（钢蓝） */
+  --color-primary: #2d5a87;
+  --color-primary-light: #5c8aad;
+  --color-primary-dark: #1e4367;
+
+  /* 品牌渐变与质感 */
+  --gradient-brand: linear-gradient(135deg, #3a6690 0%, #27517d 48%, #173a5c 100%);
+  --gradient-brand-deep: linear-gradient(150deg, #1e4367 0%, #142e49 100%);
+  --gradient-gold: linear-gradient(135deg, #e3c08f 0%, #b8935c 100%);
+  --shadow-card: 0 1px 2px rgba(28, 54, 86, 0.05), 0 10px 28px rgba(28, 54, 86, 0.09);
+  --shadow-float: 0 2px 6px rgba(28, 54, 86, 0.07), 0 20px 46px rgba(28, 54, 86, 0.14);
+
+  /* 中性页面背景 */
+  --color-bg: #f2f0e9;
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #e3eaeb;
+
+  /* 金色点缀 */
+  --color-gold: #d4a574;
+  --color-gold-light: #e3c08f;
+  --color-gold-dark: #977640;
+
+  /* 文字颜色 */
+  --color-text: #2C2C2C;
+  --color-text-secondary: #6B6B6B;
+  --color-text-light: #999999;
+
+  /* 功能色 */
+  --color-white: #FFFFFF;
+  --color-border: rgba(45, 90, 135, 0.16);
+  --color-shadow: rgba(45, 90, 135, 0.1);
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* 字体 */
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* antd-mobile 组件主色统一为品牌蓝 */
+  --adm-color-primary: var(--color-primary);
+
+  /* 动画（hover 过渡保持 0.1-0.2s 轻快手感） */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.2s ease;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.4, 0.64, 1);
+
+  /* 玻璃拟态表面与描边（卡片描边用极淡暖金） */
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-glass-strong: rgba(255, 255, 255, 0.88);
+  --border-soft: rgba(184, 150, 96, 0.15);
+  --border-gold-soft: rgba(184, 150, 96, 0.26);
+
+  /* 青绿：成功/自然语义标签 */
+  --color-teal: #5a9a8f;
+  --color-teal-dark: #437a71;
+
+  /* 发光投影（聚焦/选中态） */
+  --shadow-glow-blue: 0 0 0 3px rgba(45, 90, 135, 0.14);
+  --shadow-glow-gold: 0 0 16px rgba(212, 165, 116, 0.28);
+
+  /* 细分渐变（饰条/分割线/次渐变） */
+  --gradient-gold-soft: linear-gradient(135deg, #ecd9ae 0%, #d3ad72 100%);
+  --gradient-hairline-gold: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.55), transparent);
+}
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-tap-highlight-color: transparent;
+  /* 预留滚动条轨道：长短页面切换时视口宽度不变，消除水平跳动 */
+  scrollbar-gutter: stable;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100dvh;
+}
+
+/* 应用容器（带分层装饰背景：点阵 + 蓝金光晕 + 纵向渐变） */
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(rgba(45, 90, 135, 0.038) 1px, transparent 1.6px),
+    radial-gradient(780px 480px at 88% -10%, rgba(45, 90, 135, 0.08), transparent 62%),
+    radial-gradient(620px 440px at -12% 26%, rgba(90, 135, 171, 0.06), transparent 60%),
+    radial-gradient(700px 400px at 6% 108%, rgba(222, 184, 132, 0.09), transparent 62%),
+    linear-gradient(180deg, #f3f1ea 0%, #f0ede3 45%, #f6f1e5 100%);
+  background-size: 24px 24px, auto, auto, auto, auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 页面内容区域 */
+.page-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 88px;
+  scrollbar-width: none;
+}
+
+.app-container.has-active-journey .page-content {
+  padding-bottom: 162px;
+}
+
+.page-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* 底部导航栏（悬浮玻璃坞） */
+.tab-bar-wrapper {
+  position: fixed;
+  bottom: max(10px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 24px);
+  max-width: 520px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(24px) saturate(1.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  border: 1px solid rgba(45, 90, 135, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(30, 58, 92, 0.08), 0 16px 36px rgba(30, 58, 92, 0.2);
+  z-index: 100;
+}
+
+.tab-bar-wrapper .adm-tab-bar {
+  background: transparent;
+}
+
+.tab-bar-wrapper .adm-tab-bar-item {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* 图标底托常驻（未选中为透明），几何不随选中态变化，切换无跳动 */
+.tab-bar-wrapper .adm-tab-bar-item-icon {
+  font-size: 22px;
+  padding: 4px 14px;
+  margin: -4px -14px;
+  border-radius: 12px;
+  background-color: transparent;
+  transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+/* 选中项顶部 3px 金色指示条 */
+.tab-bar-wrapper .adm-tab-bar-item-active::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gradient-gold);
+  opacity: 0.85;
+}
+
+.tab-bar-wrapper .adm-tab-bar-item-active {
+  color: var(--color-primary) !important;
+}
+
+/* 选中项图标：淡品牌蓝晕染底，柔和区分于未选中 */
+.tab-bar-wrapper .adm-tab-bar-item-active .adm-tab-bar-item-icon {
+  background-color: rgba(45, 90, 135, 0.1);
+}
+
+.tab-bar-wrapper .adm-tab-bar-item-active .adm-tab-bar-item-title {
+  font-weight: 600;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+/* ============================================
+   全局组件质感增强（灵境智游视觉升级）
+   ============================================ */
+
+/* 选中文字：暖金底色呼应"佛光"意象 */
+::selection {
+  background: rgba(212, 165, 116, 0.32);
+  color: #22384f;
+}
+
+/* 键盘可访问焦点光环 */
+:focus-visible {
+  outline: 2px solid rgba(45, 90, 135, 0.45);
+  outline-offset: 2px;
+}
+
+/* 卡片：玻璃拟态 + 细描边 + 分层软阴影 */
+.adm-card {
+  background: var(--surface-glass-strong);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 主按钮：品牌渐变 + 发光投影 */
+.adm-button.adm-button-primary:not(.adm-button-disabled) {
+  background: var(--gradient-brand);
+  border: none;
+  box-shadow: 0 6px 16px rgba(30, 64, 100, 0.32);
+  transition: filter var(--transition-fast), box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.adm-button.adm-button-primary:not(.adm-button-disabled):hover {
+  filter: brightness(1.07);
+  box-shadow: 0 8px 20px rgba(30, 64, 100, 0.4);
+}
+
+.adm-button.adm-button-primary:not(.adm-button-disabled):active {
+  transform: scale(0.97);
+}
+
+/* 次按钮：白底 + 品牌描边 */
+.adm-button.adm-button-default:not(.adm-button-disabled) {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(45, 90, 135, 0.35);
+  color: var(--color-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.adm-button.adm-button-default:not(.adm-button-disabled):hover {
+  border-color: rgba(45, 90, 135, 0.6);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* 空心/文字按钮不吃主按钮渐变：antd-mobile 的 Modal/Dialog 动作按钮和 fill=outline
+   按钮是"品牌蓝文字 + 透明底"，被上面的渐变覆盖后变成深蓝字压深蓝底完全看不清
+   （服务评价、结束行程确认弹窗的按钮即此问题） */
+.adm-button.adm-button-primary.adm-button-fill-none:not(.adm-button-disabled),
+.adm-button.adm-button-primary.adm-button-fill-outline:not(.adm-button-disabled) {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.adm-button.adm-button-primary.adm-button-fill-outline:not(.adm-button-disabled) {
+  border-color: rgba(45, 90, 135, 0.45);
+}
+
+/* 弹窗主操作（每行最后一个按钮）保留实心品牌渐变 + 白字，保证一眼可辨 */
+.adm-modal-footer .adm-space-item:last-child .adm-button.adm-button-primary:not(.adm-button-disabled),
+.adm-dialog-action-row .adm-button.adm-button-primary:last-child:not(.adm-button-disabled) {
+  background: var(--gradient-brand);
+  border-color: transparent;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(30, 64, 100, 0.32);
+}
+
+/* 标签统一药丸形 */
+.adm-tag {
+  border-radius: 999px;
+}
+
+/* 选择器 chips：选中项品牌渐变 */
+.adm-selector-item {
+  border-radius: 999px;
+  transition: all var(--transition-fast);
+}
+
+.adm-selector-item.adm-selector-item-active {
+  background: var(--gradient-brand);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(30, 64, 100, 0.28);
+}
+
+/* Tabs 激活指示条：品牌渐变圆头 */
+.adm-tabs-tab-line {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--gradient-brand);
+}
+
+.adm-tabs-tab-active {
+  font-weight: 600;
+}
+
+/* 开关：选中态品牌渐变轨道 */
+.adm-switch.adm-switch-checked {
+  background: var(--gradient-brand);
+}
+
+/* 原生 hr：暖金渐变发丝线，不用灰线 */
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--gradient-hairline-gold);
+}
+
+/* ============================================
+   长辈模式样式
+   ============================================ */
+
+/* 长辈模式基础样式 */
+.elderly-mode {
+  --font-size-base: 20px;
+  --font-size-lg: 24px;
+  --font-size-xl: 28px;
+  --spacing-touch: 20px;
+}
+
+body[data-font-size='large'] :where(p, span, button, input, textarea, label, li, a, em, strong, .adm-tag, .adm-list-item-description) {
+  font-size: 18px !important;
+  line-height: 1.45 !important;
+}
+
+body[data-font-size='extra-large'] :where(p, span, button, input, textarea, label, li, a, em, strong, .adm-tag, .adm-list-item-description) {
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+}
+
+body[data-font-size='large'] :where(button, input, textarea, .adm-button, .adm-selector-item),
+body[data-font-size='extra-large'] :where(button, input, textarea, .adm-button, .adm-selector-item) {
+  min-height: 42px;
+  height: auto !important;
+}
+
+body[data-font-size='large'] :where(button, .adm-button, .adm-tag),
+body[data-font-size='extra-large'] :where(button, .adm-button, .adm-tag) {
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+
+body[data-font-size='large'] :where(h1, h2, h3),
+body[data-font-size='extra-large'] :where(h1, h2, h3) {
+  line-height: 1.35 !important;
+}
+
+body[data-font-size='large'] h1 { font-size: 2rem !important; }
+body[data-font-size='large'] h2 { font-size: 1.65rem !important; }
+body[data-font-size='large'] h3 { font-size: 1.35rem !important; }
+body[data-font-size='extra-large'] h1 { font-size: 2.2rem !important; }
+body[data-font-size='extra-large'] h2 { font-size: 1.8rem !important; }
+body[data-font-size='extra-large'] h3 { font-size: 1.5rem !important; }
+
+body.high-contrast {
+  --color-bg: #fff;
+  --color-bg-light: #fff;
+  --color-bg-dark: #f2f2f2;
+  --color-text: #000;
+  --color-text-secondary: #202020;
+  --color-text-light: #3d3d3d;
+  --color-border: #1b1b1b;
+  --color-shadow: rgba(0, 0, 0, 0.18);
+}
+
+body.high-contrast :where(.route-card, .story-detail-section, .feed-card, .profile-card) {
+  border-color: #1b1b1b !important;
+  background: #fff !important;
+}
+
+body.high-contrast,
+body.high-contrast #root,
+body.high-contrast .app-container,
+body.high-contrast .page-content,
+body.high-contrast :where(.home-page, .route-page, .story-page, .creative-page, .profile-page) {
+  color: #000 !important;
+  background: #fff !important;
+}
+
+body.high-contrast :where(
+  .adm-card,
+  .route-detail,
+  .story-card,
+  .creative-card,
+  .community-composer,
+  .community-post,
+  .global-chat-panel,
+  .global-chat-head,
+  .global-input-area,
+  .route-node-answer,
+  .story-detail-hero
+) {
+  border-color: #1b1b1b !important;
+  color: #000 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+body.high-contrast :where(input, textarea, select) {
+  border: 2px solid #000 !important;
+  color: #000 !important;
+  background: #fff !important;
+}
+
+body.high-contrast button :where(span, strong),
+body.high-contrast .adm-button :where(span, strong) {
+  color: inherit !important;
+}
+
+body.high-contrast .route-cover-content :where(h3, p),
+body.high-contrast .banner-text :where(h1, h2, h3, p, span) {
+  color: #fff !important;
+}
+
+body.high-contrast :where(p, span, em, strong, h1, h2, h3, li) {
+  color: #000;
+}
+
+body.high-contrast button :where(span, strong),
+body.high-contrast .adm-button :where(span, strong) {
+  color: inherit !important;
+}
+
+body.elderly-mode {
+  font-size: var(--font-size-base);
+}
+
+body.elderly-mode :where(p, span, button, input, textarea, label, li, a, em, strong, .adm-tag, .adm-list-item-description) {
+  font-size: 18px !important;
+}
+
+/* 长辈模式 - 增大导航栏 */
+.elderly-mode .tab-bar-wrapper .adm-tab-bar-item-icon {
+  font-size: 28px;
+}
+
+.elderly-mode .tab-bar-wrapper .adm-tab-bar-item-title {
+  font-size: 16px;
+}
+
+/* 长辈模式 - 文字更清晰 */
+.elderly-mode {
+  --color-text: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+}
+
+/* 安全区域适配 */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .tab-bar-wrapper {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .page-content {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+}
+
+/* 响应式适配 */
+@media (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 430px) {
+  .app-container {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  [role='button'] {
+    touch-action: manipulation;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    background: #efece3;
+  }
+
+  .app-container {
+    width: 100%;
+    max-width: 1600px;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 20px;
+    box-shadow: none;
+  }
+
+  .app-container.home-shell {
+    max-width: 1440px;
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+
+  .desktop-nav {
+    position: sticky;
+    top: 24px;
+    display: block;
+  }
+
+  .desktop-brand {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 16px;
+    border: 1px solid rgba(90, 135, 171, 0.35);
+    border-radius: 16px;
+    background:
+      radial-gradient(220px 120px at 90% -20%, rgba(227, 192, 143, 0.22), transparent 70%),
+      var(--gradient-brand-deep);
+    box-shadow: 0 4px 10px rgba(26, 52, 82, 0.28), 0 16px 36px rgba(26, 52, 82, 0.32);
+    text-align: left;
+    cursor: pointer;
+  }
+
+  /* 品牌卡底部金色饰带 */
+  .desktop-brand::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-gold-light), rgba(227, 192, 143, 0));
+  }
+
+  .desktop-brand:hover,
+  .desktop-brand:focus-visible {
+    border-color: rgba(227, 192, 143, 0.55);
+    box-shadow: 0 6px 14px rgba(26, 52, 82, 0.3), 0 20px 44px rgba(26, 52, 82, 0.4);
+    outline: none;
+  }
+
+  .desktop-brand strong {
+    display: block;
+    background: linear-gradient(135deg, #ffffff 25%, #e3c08f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 22px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+
+  .desktop-brand-logo {
+    display: block;
+    height: 44px;
+    width: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 2px 6px rgba(6, 18, 44, 0.4));
+  }
+
+  .desktop-brand span {
+    color: rgba(207, 224, 255, 0.78);
+    font-size: 13px;
+  }
+
+  .desktop-nav nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .desktop-nav nav > button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid rgba(45, 90, 135, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.66);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #475069;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .desktop-nav nav > button:hover {
+    border-color: rgba(45, 90, 135, 0.3);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 6px 16px rgba(30, 58, 92, 0.1);
+  }
+
+  .desktop-nav nav > button.active {
+    position: relative;
+    border-color: var(--border-gold-soft);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+    color: var(--color-primary);
+    font-weight: 700;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* 选中项左侧 4px 金色指示条 */
+  .desktop-nav nav > button.active::before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    left: 0;
+    width: 4px;
+    border-radius: 0 3px 3px 0;
+    background: var(--gradient-gold);
+    box-shadow: 0 0 8px rgba(212, 165, 116, 0.5);
+  }
+
+  .desktop-nav nav > button .anticon {
+    font-size: 18px;
+  }
+
+  .page-content {
+    min-height: calc(100vh - 48px);
+    min-height: calc(100dvh - 48px);
+    overflow: visible;
+    padding-bottom: 0;
+    border: 1px solid rgba(45, 90, 135, 0.08);
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: var(--shadow-float);
+  }
+
+  .app-container.has-active-journey .page-content {
+    padding-bottom: 0;
+  }
+
+  .tab-bar-wrapper {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .app-container {
+    grid-template-columns: 220px minmax(0, 1fr) 360px;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .app-container.home-shell {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+}
+.page-route-loading {
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}

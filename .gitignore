@@ -1,0 +1,52 @@
+# 真实密钥与本地环境。示例文件 .env.example 可以提交。
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+
+# 依赖、虚拟环境和包缓存
+node_modules/
+.venv/
+venv/
+.npm-cache/
+soda-reading/
+
+# 构建产物与工具缓存
+dist/
+build/
+.vite/
+coverage/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.python-version
+*.log
+*.tmp
+
+# 本地 BGE-M3 权重约 2GB，超过 GitHub 单文件 100MB 限制。
+# 需要时把 BAAI/bge-m3 下载到 models/bge-m3。
+models/
+
+# 原始 Word/Excel 只在本机重新聚合时使用；规范化结果在 backend/scripts。
+示范景区公开资料包/
+
+# 文档渲染中间产物，不是项目源码
+.ican-work/
+
+# 演示视频超过 GitHub 单文件 100MB 限制，保留在本机
+*.mp4
+
+# 编辑器与系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,212 @@
+/* 灵境智游视觉升级 - 类型C */
+
+.avatar-config-page {
+  min-width: 0;
+}
+
+.avatar-config-grid .avatar-config-col {
+  display: flex;
+}
+
+.avatar-role-card {
+  min-width: 0;
+}
+
+.avatar-role-card-body {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-role-card-body > p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.avatar-role-details {
+  margin-top: 10px;
+  border-top: 1px solid rgba(45, 90, 135, 0.1);
+}
+
+.avatar-role-details .ant-collapse-header,
+.avatar-action-library .ant-collapse-header {
+  min-height: 44px;
+  align-items: center !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  color: #3D5175 !important;
+  font-weight: 650;
+}
+
+.avatar-role-details .ant-collapse-content-box,
+.avatar-action-library .ant-collapse-content-box {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.avatar-role-actions {
+  margin-top: auto !important;
+  padding-top: 16px;
+}
+
+.avatar-role-actions .ant-btn {
+  min-height: 42px;
+}
+
+.avatar-action-library .ant-card-body {
+  padding-top: 4px;
+}
+
+.avatar-preview-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.avatar-preview-toolbar .ant-btn {
+  min-height: 40px;
+  border-radius: 8px;
+}
+
+/* ==================== 灵境智游视觉升级（类型C） ==================== */
+
+/* 折叠面板标题 hover 品牌蓝 */
+.avatar-role-details .ant-collapse-header,
+.avatar-action-library .ant-collapse-header {
+  transition: color 0.2s var(--ease-standard);
+}
+
+.avatar-role-details .ant-collapse-header:hover,
+.avatar-action-library .ant-collapse-header:hover {
+  color: var(--brand-primary) !important;
+}
+
+/* 角色卡悬浮微浮起 */
+.avatar-role-card.ant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-float) !important;
+}
+
+/* 角色卡蓝色横幅底部暖金发丝线（横幅自带 position:relative） */
+.avatar-role-card > .ant-card-body > div:first-child::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(227, 192, 143, 0.65), transparent);
+  pointer-events: none;
+}
+
+/* 状态标签：通过=青绿渐变 pill，待检查/未完成=琥珀 pill */
+.avatar-config-page .ant-tag-green,
+.avatar-config-page .ant-tag-success {
+  background: linear-gradient(135deg, #6fae9f, #4e9184);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(90, 154, 143, 0.32);
+}
+
+.avatar-config-page .ant-tag-orange,
+.avatar-config-page .ant-tag-warning {
+  background: linear-gradient(135deg, #f0b429, #d48806);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(212, 136, 6, 0.3);
+}
+
+/* 角色卡操作区：预览=白底品牌描边，编辑 ghost hover 发光 */
+.avatar-role-actions .ant-btn:first-child:not(:disabled) {
+  background: #fff;
+  border-color: rgba(45, 90, 135, 0.4);
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+.avatar-role-actions .ant-btn:first-child:hover:not(:disabled) {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary-dark);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.avatar-role-actions .ant-btn-background-ghost:hover:not(:disabled) {
+  background: rgba(45, 90, 135, 0.07);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* 预览弹层：次按钮白底品牌描边 */
+.avatar-preview-toolbar .ant-btn-default:not(:disabled) {
+  border-color: rgba(45, 90, 135, 0.4);
+  color: var(--brand-primary);
+}
+
+.avatar-preview-toolbar .ant-btn-default:hover:not(:disabled) {
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* 预览舞台：深色画布加柔光外框（边框/底色为内联样式，仅加投影） */
+.avatar-preview-stage {
+  box-shadow:
+    var(--shadow-card),
+    0 0 0 4px rgba(45, 90, 135, 0.06);
+}
+
+/* 动作库卡片头：深蓝渐变 + 白字 + 暖金发丝线 */
+.avatar-action-library .ant-card-head {
+  background: linear-gradient(135deg, #1e4367 0%, #33628a 55%, #2d5a87 100%);
+  border-bottom: 1px solid var(--border-gold-soft);
+  border-radius: 16px 16px 0 0;
+}
+
+.avatar-action-library .ant-card-head-title {
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.avatar-action-library .ant-card-head .ant-tag {
+  background: rgba(227, 192, 143, 0.14);
+  border-color: rgba(227, 192, 143, 0.45);
+  color: #e3c08f;
+}
+
+@media (max-width: 900px) {
+  .avatar-role-card > .ant-card-body > div:first-child {
+    min-height: 132px;
+  }
+
+  .avatar-preview-stage {
+    height: min(500px, 58vh) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .avatar-preview-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .avatar-preview-toolbar > .ant-space:last-child,
+  .avatar-preview-toolbar > .ant-space:last-child .ant-space-item,
+  .avatar-preview-toolbar > .ant-space:last-child .ant-btn {
+    width: 100%;
+  }
+
+  .avatar-preview-stage {
+    height: 430px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-config-page *,
+  .avatar-config-page *::before,
+  .avatar-config-page *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

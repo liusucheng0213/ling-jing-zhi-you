@@ -1,0 +1,202 @@
+services:
+  api:
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - DATABASE_URL=postgresql+asyncpg://user:pass@postgres:5432/lingjing
+      - REDIS_URL=redis://redis:6379/0
+      - DEEPSEEK_API_KEY=${DEEPSEEK_API_KEY}
+      - DEEPSEEK_MODEL=deepseek-v4-flash
+      - VISION_PROVIDER=${VISION_PROVIDER:-aliyun_bailian}
+      - VISION_API_KEY=${VISION_API_KEY}
+      - VISION_BASE_URL=${VISION_BASE_URL:-}
+      - VISION_MODEL=${VISION_MODEL:-qwen3.6-flash-2026-04-16}
+      - XFYUN_APP_ID=${XFYUN_APP_ID}
+      - XFYUN_API_KEY=${XFYUN_API_KEY}
+      - XFYUN_API_SECRET=${XFYUN_API_SECRET}
+      - XFYUN_TTS_URL=${XFYUN_TTS_URL:-wss://tts-api.xfyun.cn/v2/tts}
+      - XFYUN_TTS_VCN=${XFYUN_TTS_VCN:-xiaoyan}
+      - XFYUN_AVATAR_SERVER_URL=${XFYUN_AVATAR_SERVER_URL:-wss://avatar.cn-huadong-1.xf-yun.com/v1/interact}
+      - XFYUN_AVATAR_SCENE_ID=${XFYUN_AVATAR_SCENE_ID}
+      - XFYUN_AVATAR_LINGXIAOCHAN_ID=${XFYUN_AVATAR_LINGXIAOCHAN_ID}
+      - XFYUN_AVATAR_WUCHANSHI_ID=${XFYUN_AVATAR_WUCHANSHI_ID}
+      - XFYUN_AVATAR_XUANZANG_ID=${XFYUN_AVATAR_XUANZANG_ID}
+      - XFYUN_AVATAR_ZHAOPUCHU_ID=${XFYUN_AVATAR_ZHAOPUCHU_ID}
+      - XFYUN_AVATAR_XIAOWAN_ID=${XFYUN_AVATAR_XIAOWAN_ID}
+      - XFYUN_AVATAR_LINGXIAOCHAN_VCN=${XFYUN_AVATAR_LINGXIAOCHAN_VCN:-x4_lingxiaoxuan_oral}
+      - XFYUN_AVATAR_WUCHANSHI_VCN=${XFYUN_AVATAR_WUCHANSHI_VCN:-x4_mingge}
+      - XFYUN_AVATAR_XUANZANG_VCN=${XFYUN_AVATAR_XUANZANG_VCN:-x4_lingfeizhe_oral}
+      - XFYUN_AVATAR_ZHAOPUCHU_VCN=${XFYUN_AVATAR_ZHAOPUCHU_VCN:-x4_mingge}
+      - XFYUN_AVATAR_XIAOWAN_VCN=${XFYUN_AVATAR_XIAOWAN_VCN:-x4_lingxiaoyue_oral_emo}
+      - XFYUN_AVATAR_VCN=${XFYUN_AVATAR_VCN:-x4_lingxiaoxuan_oral}
+      - XFYUN_AVATAR_STREAM_PROTOCOL=${XFYUN_AVATAR_STREAM_PROTOCOL:-xrtc}
+      - XFYUN_AVATAR_WIDTH=${XFYUN_AVATAR_WIDTH:-720}
+      - XFYUN_AVATAR_HEIGHT=${XFYUN_AVATAR_HEIGHT:-1280}
+      - XFYUN_AVATAR_FPS=${XFYUN_AVATAR_FPS:-20}
+      - XFYUN_AVATAR_BITRATE=${XFYUN_AVATAR_BITRATE:-800000}
+      - XFYUN_AVATAR_EXPOSE_SECRET_TO_FRONTEND=${XFYUN_AVATAR_EXPOSE_SECRET_TO_FRONTEND:-false}
+      - XFYUN_AVATAR_BACKGROUND_RES_KEY=${XFYUN_AVATAR_BACKGROUND_RES_KEY}
+      - XFYUN_AVATAR_BACKGROUND_TYPE=${XFYUN_AVATAR_BACKGROUND_TYPE:-res_key}
+      - EMBEDDING_MODEL_PATH=${EMBEDDING_MODEL_PATH:-./models/bge-m3}
+      - USE_LOCAL_EMBEDDING=${USE_LOCAL_EMBEDDING:-false}
+      - EMBEDDING_DEVICE=${EMBEDDING_DEVICE:-auto}
+      - EMBEDDING_LOCAL_BACKEND=${EMBEDDING_LOCAL_BACKEND:-auto}
+      - EMBEDDING_SERVICE_URL=http://embedding-service:8010
+      - DEBUG=${DEBUG:-false}
+      - PUBLIC_MATERIAL_DIR=/app/public-materials
+      - ADMIN_USERNAME=${ADMIN_USERNAME:-admin}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      postgres:
+        condition: service_started
+      redis:
+        condition: service_started
+      embedding-service:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - ./models:/app/models
+      - ./示范景区公开资料包:/app/public-materials:ro
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  frontend:
+    restart: unless-stopped
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_BASE_URL=
+      - VITE_DEV_API_TARGET=http://api:8000
+      # Windows 挂载卷下 inotify 无法感知宿主机改动，启用轮询保证热更新
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run dev -- --host 0.0.0.0 --port 3000
+
+  admin-web:
+    restart: unless-stopped
+    build:
+      context: ./admin-web
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./admin-web:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_BASE_URL=
+      - VITE_DEV_API_TARGET=http://api:8000
+      # Windows 挂载卷下 inotify 无法感知宿主机改动，启用轮询保证热更新
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run dev -- --host 0.0.0.0 --port 3001
+
+  postgres:
+    restart: unless-stopped
+    image: pgvector/pgvector:pg16
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=lingjing
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+    command: postgres -c shared_buffers=256MB -c max_connections=50
+
+  redis:
+    restart: unless-stopped
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: redis-server --maxmemory 128mb --maxmemory-policy allkeys-lru
+
+  embedding-worker:
+    profiles:
+      - tools
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.embedding
+      args:
+        - EMBEDDING_BASE_IMAGE=${EMBEDDING_BASE_IMAGE:-pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime}
+        - TORCH_WHEEL_INDEX_URL=${PYTORCH_WHEEL_INDEX_URL:-https://download.pytorch.org/whl/cu124}
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - DATABASE_URL=postgresql+asyncpg://user:pass@postgres:5432/lingjing
+      - EMBEDDING_MODEL_PATH=/app/models/bge-m3
+      - USE_LOCAL_EMBEDDING=true
+      - EMBEDDING_DEVICE=${EMBEDDING_DEVICE:-cuda}
+      - EMBEDDING_LOCAL_BACKEND=${EMBEDDING_LOCAL_BACKEND:-sentence-transformers}
+      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES:-all}
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    gpus: all
+    volumes:
+      - ./backend:/app
+      - ./models:/app/models
+    depends_on:
+      - postgres
+    command: python -m scripts.generate_embeddings --concurrency 1
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+        limits:
+          memory: 6G
+
+  embedding-service:
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.embedding
+      args:
+        - EMBEDDING_BASE_IMAGE=${EMBEDDING_BASE_IMAGE:-pytorch/pytorch:2.6.0-cuda12.4-cudnn9-runtime}
+        - TORCH_WHEEL_INDEX_URL=${PYTORCH_WHEEL_INDEX_URL:-https://download.pytorch.org/whl/cu124}
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - EMBEDDING_MODEL_PATH=/app/models/bge-m3
+      - USE_LOCAL_EMBEDDING=true
+      - EMBEDDING_DEVICE=${EMBEDDING_DEVICE:-cuda}
+      - EMBEDDING_LOCAL_BACKEND=${EMBEDDING_LOCAL_BACKEND:-sentence-transformers}
+      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES:-all}
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    gpus: all
+    volumes:
+      - ./backend:/app
+      - ./models:/app/models
+    ports:
+      - "8010:8010"
+    command: uvicorn app.embedding_service:app --host 0.0.0.0 --port 8010
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8010/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 90s
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+        limits:
+          memory: 6G
+
+volumes:
+  postgres_data:

@@ -1,0 +1,346 @@
+[
+  {
+    "id": "route-history",
+    "name": "历史文化爱好者路线",
+    "description": "6小时深度游，涵盖灵山胜境最核心的历史文化景点，适合对佛教文化、历史建筑有浓厚兴趣的游客",
+    "tags": [
+      "历史",
+      "文化",
+      "深度",
+      "佛教"
+    ],
+    "total_time": "6小时",
+    "total_distance": "约3.5公里",
+    "difficulty": "medium",
+    "nodes": [
+      {
+        "spot_id": "LS-001",
+        "order": 1,
+        "stay_time": "15分钟",
+        "description": "欣赏华夏第一壁，解读赵朴初诗刻"
+      },
+      {
+        "spot_id": "LS-002",
+        "order": 2,
+        "stay_time": "10分钟",
+        "description": "漫步五明桥，体悟五明智慧"
+      },
+      {
+        "spot_id": "LS-003",
+        "order": 3,
+        "stay_time": "15分钟",
+        "description": "瞻仰佛足，触摸32种吉祥瑞相"
+      },
+      {
+        "spot_id": "LS-004",
+        "order": 4,
+        "stay_time": "10分钟",
+        "description": "穿五智门，悟六度波罗蜜"
+      },
+      {
+        "spot_id": "LS-005",
+        "order": 5,
+        "stay_time": "15分钟",
+        "description": "漫步菩提大道，感受禅意清幽"
+      },
+      {
+        "spot_id": "LS-006",
+        "order": 6,
+        "stay_time": "30分钟",
+        "description": "观赏九龙灌浴动态表演，接取圣水"
+      },
+      {
+        "spot_id": "LS-007",
+        "order": 7,
+        "stay_time": "15分钟",
+        "description": "观赏降魔浮雕，聆听成道故事"
+      },
+      {
+        "spot_id": "LS-008",
+        "order": 8,
+        "stay_time": "10分钟",
+        "description": "瞻仰阿育王柱，了解佛法东传"
+      },
+      {
+        "spot_id": "LS-010",
+        "order": 9,
+        "stay_time": "30分钟",
+        "description": "祥符禅寺礼佛祈福，聆听钟声"
+      },
+      {
+        "spot_id": "LS-011",
+        "order": 10,
+        "stay_time": "45分钟",
+        "description": "登顶抱佛脚，俯瞰太湖全景"
+      },
+      {
+        "spot_id": "LS-012",
+        "order": 11,
+        "stay_time": "30分钟",
+        "description": "参观佛教文化博览馆，万佛殿祈福"
+      },
+      {
+        "spot_id": "LS-013",
+        "order": 12,
+        "stay_time": "60分钟",
+        "description": "深度游览梵宫艺术殿堂，观看《吉祥颂》"
+      },
+      {
+        "spot_id": "LS-014",
+        "order": 13,
+        "stay_time": "30分钟",
+        "description": "体验藏传佛教文化，转动转经筒"
+      },
+      {
+        "spot_id": "LS-016",
+        "order": 14,
+        "stay_time": "20分钟",
+        "description": "参观无尽意斋，品鉴禅茶"
+      }
+    ]
+  },
+  {
+    "id": "route-nature",
+    "name": "自然风光爱好者路线",
+    "description": "5小时全景游，重点欣赏太湖风光与自然景观，感受佛教文化与自然环境的完美融合",
+    "tags": [
+      "自然",
+      "风光",
+      "摄影",
+      "太湖"
+    ],
+    "total_time": "5小时",
+    "total_distance": "约3公里",
+    "difficulty": "easy",
+    "nodes": [
+      {
+        "spot_id": "LS-001",
+        "order": 1,
+        "stay_time": "15分钟",
+        "description": "拍摄照壁与太湖同框美景"
+      },
+      {
+        "spot_id": "LS-002",
+        "order": 2,
+        "stay_time": "10分钟",
+        "description": "拍摄石桥与香水海倒影"
+      },
+      {
+        "spot_id": "LS-005",
+        "order": 3,
+        "stay_time": "20分钟",
+        "description": "漫步菩提大道，欣赏太湖与青龙山、白虎山风貌"
+      },
+      {
+        "spot_id": "LS-006",
+        "order": 4,
+        "stay_time": "30分钟",
+        "description": "观赏九龙灌浴，拍摄水幕与彩虹"
+      },
+      {
+        "spot_id": "LS-011",
+        "order": 5,
+        "stay_time": "45分钟",
+        "description": "登顶大佛，拍摄太湖日落，佛光普照"
+      },
+      {
+        "spot_id": "LS-015",
+        "order": 6,
+        "stay_time": "20分钟",
+        "description": "拍摄曼飞龙塔与香水海、五印坛城同框"
+      },
+      {
+        "spot_id": "LS-014",
+        "order": 7,
+        "stay_time": "25分钟",
+        "description": "登坛城观景台，俯瞰三水环抱全景"
+      },
+      {
+        "spot_id": "LS-013",
+        "order": 8,
+        "stay_time": "40分钟",
+        "description": "拍摄梵宫莲花圣塔与香水海美景"
+      }
+    ]
+  },
+  {
+    "id": "route-family",
+    "name": "亲子家庭轻松路线",
+    "description": "4小时轻松游，精选互动性强、趣味十足的景点，让孩子在欢乐中感受佛教文化",
+    "tags": [
+      "亲子",
+      "轻松",
+      "互动",
+      "趣味"
+    ],
+    "total_time": "4小时",
+    "total_distance": "约2.5公里",
+    "difficulty": "easy",
+    "nodes": [
+      {
+        "spot_id": "LS-001",
+        "order": 1,
+        "stay_time": "10分钟",
+        "description": "照壁前全家福合影"
+      },
+      {
+        "spot_id": "LS-006",
+        "order": 2,
+        "stay_time": "30分钟",
+        "description": "观赏动态喷泉表演，讲述佛陀诞生故事"
+      },
+      {
+        "spot_id": "LS-009",
+        "order": 3,
+        "stay_time": "20分钟",
+        "description": "摸弥勒佛肚皮，寻找百名孩童不同姿态"
+      },
+      {
+        "spot_id": "LS-010",
+        "order": 4,
+        "stay_time": "20分钟",
+        "description": "聆听禅钟，观赏千年银杏"
+      },
+      {
+        "spot_id": "LS-011",
+        "order": 5,
+        "stay_time": "30分钟",
+        "description": "亲子抱佛脚，培养勇气与探索精神"
+      },
+      {
+        "spot_id": "LS-012",
+        "order": 6,
+        "stay_time": "25分钟",
+        "description": "参观博览馆，参与互动知识问答"
+      },
+      {
+        "spot_id": "LS-013",
+        "order": 7,
+        "stay_time": "40分钟",
+        "description": "观看《吉祥颂》全息投影演出"
+      },
+      {
+        "spot_id": "LS-014",
+        "order": 8,
+        "stay_time": "20分钟",
+        "description": "体验转经筒，感受藏式文化"
+      }
+    ]
+  },
+  {
+    "id": "route-photo",
+    "name": "摄影爱好者路线",
+    "description": "重点推荐最佳拍照机位与时段，捕捉灵山胜境最美的光影瞬间",
+    "tags": [
+      "摄影",
+      "拍照",
+      "光影",
+      "机位"
+    ],
+    "total_time": "5小时",
+    "total_distance": "约3公里",
+    "difficulty": "medium",
+    "nodes": [
+      {
+        "spot_id": "LS-001",
+        "order": 1,
+        "stay_time": "20分钟",
+        "description": "清晨拍摄照壁与太湖日出同框"
+      },
+      {
+        "spot_id": "LS-002",
+        "order": 2,
+        "stay_time": "15分钟",
+        "description": "拍摄石桥倒影，最佳时段上午9-10点"
+      },
+      {
+        "spot_id": "LS-005",
+        "order": 3,
+        "stay_time": "20分钟",
+        "description": "菩提大道光影，春季花季绝美"
+      },
+      {
+        "spot_id": "LS-006",
+        "order": 4,
+        "stay_time": "25分钟",
+        "description": "表演时拍摄水幕彩虹，需晴天"
+      },
+      {
+        "spot_id": "LS-011",
+        "order": 5,
+        "stay_time": "40分钟",
+        "description": "夕阳下拍摄大佛金色佛光，最佳时段17:00左右"
+      },
+      {
+        "spot_id": "LS-013",
+        "order": 6,
+        "stay_time": "30分钟",
+        "description": "梵宫莲花圣塔与香水海，傍晚金光最美"
+      },
+      {
+        "spot_id": "LS-014",
+        "order": 7,
+        "stay_time": "25分钟",
+        "description": "坛城金顶与湖面倒影，清晨薄雾时分绝佳"
+      },
+      {
+        "spot_id": "LS-015",
+        "order": 8,
+        "stay_time": "20分钟",
+        "description": "白塔与绿水绿树，蓝天白云背景最佳"
+      }
+    ]
+  },
+  {
+    "id": "route-zen",
+    "name": "禅修主题静心路线",
+    "description": "约3小时慢行路线，以环境观察、文化礼仪和安静停留为主，适合希望放慢节奏的游客；本路线不是正式禅修课程，开放区域与活动安排以景区当天公告为准",
+    "tags": [
+      "禅修",
+      "静心",
+      "礼仪",
+      "慢游"
+    ],
+    "total_time": "3小时",
+    "total_distance": "约2公里",
+    "difficulty": "easy",
+    "nodes": [
+      {
+        "spot_id": "LS-001",
+        "order": 1,
+        "stay_time": "10分钟",
+        "description": "在灵山大照壁前确认游览信息，观察入口空间与中轴关系"
+      },
+      {
+        "spot_id": "LS-003",
+        "order": 2,
+        "stay_time": "15分钟",
+        "description": "在佛足坛观察纹样与现场说明，了解基本参观礼仪"
+      },
+      {
+        "spot_id": "LS-005",
+        "order": 3,
+        "stay_time": "25分钟",
+        "description": "沿菩提大道慢行，选择不影响通行的位置短暂停留"
+      },
+      {
+        "spot_id": "LS-010",
+        "order": 4,
+        "stay_time": "40分钟",
+        "description": "参观祥符禅寺，降低音量并依据现场展签了解寺院文化"
+      },
+      {
+        "spot_id": "LS-011",
+        "order": 5,
+        "stay_time": "35分钟",
+        "description": "在灵山大佛区域观察造像手印与空间尺度，遵从现场动线"
+      },
+      {
+        "spot_id": "LS-016",
+        "order": 6,
+        "stay_time": "30分钟",
+        "description": "在无尽意斋完成安静回顾；茶饮与体验项目以当天开放信息为准"
+      }
+    ]
+  }
+]

@@ -1,0 +1,124 @@
+/* 灵境智游视觉升级 - 类型D */
+.feedback-content {
+  padding: 8px 0;
+}
+
+.feedback-section {
+  margin-bottom: 16px;
+}
+
+.feedback-label {
+  display: block;
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.rating-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.rating-label {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+.tag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dimension-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dimension-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.feedback-tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border-gold-soft);
+}
+
+.feedback-tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(30, 64, 100, 0.12);
+}
+
+.feedback-tag.selected {
+  background: var(--gradient-brand);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(30, 64, 100, 0.28);
+}
+
+.feedback-tag.selected:hover {
+  color: #fff;
+  filter: brightness(1.06);
+}
+
+.feedback-tag:active {
+  transform: scale(0.95);
+}
+
+/* 提交成功 */
+.feedback-success {
+  text-align: center;
+  padding: 24px 0;
+}
+
+.success-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.feedback-success p {
+  font-size: 16px;
+  color: var(--color-text);
+  font-weight: 600;
+  margin: 0;
+}
+
+.success-sub {
+  font-size: 13px !important;
+  color: var(--color-text-light) !important;
+  font-weight: 400 !important;
+  margin-top: 8px !important;
+}
+
+/* 长辈模式 */
+.elderly-mode .feedback-label {
+  font-size: 18px;
+}
+
+.elderly-mode .feedback-tag {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.elderly-mode .rating-label {
+  font-size: 16px;
+}

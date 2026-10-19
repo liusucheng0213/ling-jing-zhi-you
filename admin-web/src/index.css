@@ -1,0 +1,287 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 设计变量（禅意山水主题：柔和钢蓝 + 暖金点缀，低饱和） */
+:root {
+  --brand-primary: #2d5a87;
+  --brand-primary-light: #5c8aad;
+  --brand-primary-dark: #1e4367;
+  --brand-gold: #d4a574;
+  --brand-gold-light: #e3c08f;
+  --brand-teal: #5a9a8f;
+  --gradient-brand: linear-gradient(135deg, #3a6690 0%, #27517d 48%, #173a5c 100%);
+  --gradient-gold: linear-gradient(135deg, #e3c08f 0%, #b8935c 100%);
+  --gradient-hairline-gold: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.55), transparent);
+  --border-soft: rgba(184, 150, 96, 0.16);
+  --border-gold-soft: rgba(184, 150, 96, 0.26);
+  --shadow-card: 0 1px 2px rgba(28, 54, 86, 0.05), 0 10px 28px rgba(28, 54, 86, 0.09);
+  --shadow-float: 0 2px 6px rgba(28, 54, 86, 0.07), 0 20px 46px rgba(28, 54, 86, 0.14);
+  --shadow-glow-blue: 0 0 0 3px rgba(45, 90, 135, 0.14);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1efe8;
+  background-image:
+    radial-gradient(rgba(45, 90, 135, 0.04) 1px, transparent 1.6px),
+    radial-gradient(880px 460px at 92% -10%, rgba(45, 90, 135, 0.07), transparent 62%),
+    radial-gradient(640px 400px at -8% 100%, rgba(222, 184, 132, 0.08), transparent 60%),
+    linear-gradient(180deg, #f2f0ea 0%, #edeae1 100%);
+  background-size: 24px 24px, auto, auto, auto;
+  background-attachment: fixed;
+}
+
+/* antd 卡片统一质感：极淡暖金描边 + 分层软阴影 + 16px 圆角 + hover 上浮 */
+.ant-card {
+  border-color: var(--border-soft);
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(28, 54, 86, 0.04), 0 10px 26px rgba(28, 54, 86, 0.07);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-gold-soft);
+  box-shadow: 0 2px 6px rgba(28, 54, 86, 0.06), 0 16px 38px rgba(28, 54, 86, 0.11);
+}
+
+.ant-card .ant-card-head {
+  border-bottom-color: var(--border-gold-soft);
+}
+
+.ant-card .ant-card-head-title {
+  font-weight: 600;
+}
+
+/* 主按钮：品牌渐变 + 发光投影 */
+.ant-btn-primary {
+  background: linear-gradient(135deg, #3a6690, #27517d 55%, #173a5c);
+  border: none;
+  box-shadow: 0 6px 16px rgba(30, 64, 100, 0.34);
+}
+
+.ant-btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #5c97ff, #3367f0 55%, #2143ad);
+  box-shadow: 0 8px 20px rgba(30, 64, 100, 0.42);
+}
+
+.ant-btn-primary:disabled {
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+}
+
+/* 深色侧栏菜单：选中项渐变药丸 */
+.ant-menu-dark .ant-menu-item {
+  border-radius: 10px;
+}
+
+/* 深色侧栏菜单：选中项半透明毛玻璃 + 左侧 4px 金色指示条 */
+.ant-menu-dark .ant-menu-item-selected {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: inset 4px 0 0 var(--brand-gold), 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* 表格表头淡蓝底，与整体色调统一 */
+.ant-table-thead > tr > th {
+  background: #eef2f1;
+}
+
+/* 统计数值：品牌渐变大字，一眼看到重点 */
+.ant-statistic .ant-statistic-content {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e4ecf7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9db8e2;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8aacc6;
+}
+
+/* 登录页背景动画 */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================
+   全局组件质感增强（灵境智游视觉升级）
+   ============================================ */
+
+/* 选中文字：暖金底色 */
+::selection {
+  background: rgba(212, 165, 116, 0.32);
+  color: #22384f;
+}
+
+/* 主按钮按压反馈 */
+.ant-btn-primary:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+/* 次按钮 hover 描边发光 */
+.ant-btn-default:not(:disabled):hover {
+  box-shadow: var(--shadow-glow-blue);
+}
+
+/* 开关：选中态品牌渐变轨道 */
+.ant-switch.ant-switch-checked {
+  background: var(--gradient-brand);
+}
+
+.ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+  background: linear-gradient(135deg, #5c97ff, #3367f0 55%, #2143ad);
+}
+
+/* 滑块：已填充段渐变 + 白色圆钮投影 */
+.ant-slider .ant-slider-track {
+  background: linear-gradient(90deg, #3a6690, #27517d);
+}
+
+.ant-slider .ant-slider-handle::after {
+  background: #fff;
+  border: 2px solid var(--brand-primary);
+  box-shadow: 0 2px 6px rgba(28, 54, 86, 0.24);
+}
+
+/* 进度条：品牌渐变填充 */
+.ant-progress .ant-progress-bg {
+  background: var(--gradient-brand);
+}
+
+/* 标签统一药丸形 */
+.ant-tag {
+  border-radius: 999px;
+}
+
+/* 表格：表头淡蓝渐变 + 行 hover 着色 */
+.ant-table-thead > tr > th {
+  background: linear-gradient(180deg, #f2f6f5, #e8efee);
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(45, 90, 135, 0.05) !important;
+}
+
+/* 统计数值：等宽数字，跳动不抖动 */
+.ant-statistic .ant-statistic-content {
+  font-variant-numeric: tabular-nums;
+}
+
+/* 分页选中页：品牌渐变 */
+.ant-pagination .ant-pagination-item-active {
+  background: var(--gradient-brand);
+  border-color: transparent;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: #fff;
+}
+
+/* 弹窗/抽屉标题底部暖金发丝线 */
+.ant-modal .ant-modal-header,
+.ant-drawer .ant-drawer-header {
+  border-bottom: 1px solid var(--border-gold-soft);
+}
+
+/* 输入控件聚焦光环 */
+.ant-input-affix-wrapper-focused,
+.ant-input:focus,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  box-shadow: var(--shadow-glow-blue) !important;
+}
+
+/* 深色侧栏菜单 hover 微亮 */
+.ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):hover {
+  background: rgba(90, 135, 171, 0.16);
+}
+
+/* 按钮/输入控件统一 10px 圆角，去掉框架默认方正感 */
+.ant-btn {
+  border-radius: 10px;
+}
+
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-input-number,
+.ant-select .ant-select-selector,
+.ant-picker {
+  border-radius: 10px !important;
+}
+
+/* 分割线：暖金渐变发丝线（替换默认灰线） */
+.ant-divider-horizontal {
+  border-block-start: 1px solid transparent !important;
+  border-image: var(--gradient-hairline-gold) 1 !important;
+}
+
+.ant-divider-horizontal.ant-divider-with-text::before,
+.ant-divider-horizontal.ant-divider-with-text::after {
+  border-block-start: 1px solid transparent !important;
+  border-image: var(--gradient-hairline-gold) 1 !important;
+}
+
+/* 空状态：图标更大更柔和，描述带引导感 */
+.ant-empty .ant-empty-image {
+  opacity: 0.85;
+}
+
+.ant-empty .ant-empty-description {
+  color: #667085;
+}
+
+/* ============================================
+   布局固定与滚动优化（灵境智游交互升级）
+   ============================================ */
+
+/* 预留滚动条轨道：页面内容长短变化时视口宽度不变，消除水平跳动 */
+html {
+  scrollbar-gutter: stable;
+}
+
+/* 主框架一屏锁定：侧栏与顶部 Header 固定不动，仅内容区内部滚动
+   （.ant-layout 仅 MainLayout 使用，登录页/数据大屏不受影响） */
+.ant-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 菜单项超出侧栏高度时侧栏内部滚动 */
+.ant-layout-sider {
+  overflow-y: auto;
+  scrollbar-width: thin;
+}

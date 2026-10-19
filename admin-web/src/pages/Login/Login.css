@@ -1,0 +1,285 @@
+/* 灵境智游视觉升级 - 类型C（登录页） */
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(460px, 1fr) 480px;
+  align-items: stretch;
+  background: #EEF3FA;
+}
+
+.login-visual {
+  position: relative;
+  min-height: 100vh;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(210, 172, 108, 0.14), transparent 44%),
+    linear-gradient(102deg, rgba(16, 42, 68, 0.56) 0%, rgba(45, 90, 135, 0.36) 46%, rgba(45, 90, 135, 0.1) 82%, rgba(33, 63, 99, 0.2) 100%),
+    url('/assets/scenery/lingshan-buddha-cover.jpg') center / cover no-repeat;
+}
+
+.login-visual::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 36%;
+  background: linear-gradient(180deg, transparent, rgba(5, 15, 38, 0.62));
+  pointer-events: none;
+}
+
+.login-brand,
+.login-metrics {
+  position: relative;
+  z-index: 1;
+}
+
+.login-seal {
+  position: absolute;
+  top: 52px;
+  right: 52px;
+  z-index: 1;
+  padding: 12px 8px;
+  border: 1px solid rgba(210, 172, 108, 0.62);
+  border-radius: 4px;
+  background: rgba(16, 42, 68, 0.28);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 6px 18px rgba(3, 12, 34, 0.25);
+  color: #e3c98a;
+  font-size: 13px;
+  letter-spacing: 0.34em;
+  line-height: 1;
+  writing-mode: vertical-rl;
+}
+
+.login-brand {
+  max-width: 620px;
+}
+
+.login-brand span {
+  display: inline-flex;
+  height: 30px;
+  align-items: center;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-indent: 0.24em;
+}
+
+.login-brand strong {
+  display: block;
+  margin-top: 22px;
+  font-size: 40px;
+  line-height: 1.22;
+  letter-spacing: 0.06em;
+  text-shadow: 0 2px 20px rgba(2, 10, 32, 0.45);
+}
+
+.login-brand p {
+  max-width: 520px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.login-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 760px;
+}
+
+.login-metrics div {
+  min-height: 118px;
+  padding: 16px 16px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.login-metrics div::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin-bottom: 12px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #c9a976, rgba(210, 172, 108, 0));
+}
+
+.login-metrics div:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 12px 28px rgba(3, 12, 34, 0.3);
+}
+
+.login-metrics .anticon {
+  font-size: 21px;
+  color: #e3c98a;
+}
+
+.login-metrics strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+.login-metrics span {
+  display: block;
+  margin-top: 5px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 12px;
+}
+
+.login-page > .ant-spin-nested-loading {
+  align-self: center;
+  justify-self: center;
+  width: min(100% - 48px, 410px);
+}
+
+.login-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-gold-soft);
+  border-radius: 16px;
+  box-shadow:
+    0 24px 60px rgba(33, 63, 99, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.login-card-head {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-logo {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: 30px;
+  box-shadow:
+    0 12px 28px rgba(45, 90, 135, 0.32),
+    0 0 0 4px rgba(45, 90, 135, 0.08);
+}
+
+.login-card h1 {
+  margin: 0;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.login-card p {
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.login-card .ant-input-affix-wrapper,
+.login-card .ant-input {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.login-card .ant-input-affix-wrapper:focus-within,
+.login-card .ant-input:focus {
+  border-color: var(--brand-primary);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.login-card .ant-input-prefix {
+  color: #2d5a87;
+}
+
+.login-submit {
+  margin: 24px 0 0;
+}
+
+.login-submit .ant-btn {
+  height: 44px;
+  border-radius: 10px;
+  background: var(--gradient-brand);
+  box-shadow: 0 8px 20px rgba(30, 64, 100, 0.32);
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    filter 0.2s var(--ease-standard),
+    box-shadow 0.2s var(--ease-standard),
+    transform 0.12s var(--ease-standard);
+}
+
+.login-submit .ant-btn:not(:disabled):hover {
+  background: var(--gradient-brand);
+  filter: brightness(1.07);
+  box-shadow:
+    0 10px 26px rgba(30, 64, 100, 0.4),
+    0 0 0 3px rgba(45, 90, 135, 0.12);
+}
+
+.login-submit .ant-btn:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 980px) {
+  .login-page {
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    padding: 24px;
+    background:
+      linear-gradient(180deg, rgba(16, 42, 68, 0.6), rgba(45, 90, 135, 0.38)),
+      url('/assets/scenery/lingshan-buddha-cover.jpg') center / cover no-repeat;
+  }
+
+  .login-visual {
+    min-height: auto;
+    padding: 0;
+    background: none;
+  }
+
+  .login-visual::after,
+  .login-seal,
+  .login-metrics {
+    display: none;
+  }
+
+  .login-brand {
+    margin-bottom: 28px;
+  }
+
+  .login-brand strong {
+    font-size: 30px;
+  }
+
+  .login-page > .ant-spin-nested-loading {
+    width: min(100%, 410px);
+  }
+}

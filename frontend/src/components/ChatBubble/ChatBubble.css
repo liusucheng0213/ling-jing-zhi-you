@@ -1,0 +1,254 @@
+/* 灵境智游视觉升级 - 类型D */
+.chat-bubble {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 12px;
+  max-width: 90%;
+}
+
+.chat-bubble.user {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.chat-bubble.assistant {
+  margin-right: auto;
+}
+
+.bubble-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(45, 90, 135, 0.18);
+}
+
+.bubble-avatar.assistant-mark {
+  border: 2px solid rgba(232, 201, 160, 0.82);
+  overflow: hidden;
+  background: #e9eff1;
+}
+
+.bubble-avatar.assistant-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.bubble-avatar.user {
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  background:
+    radial-gradient(circle at 32% 22%, rgba(255, 255, 255, 0.62), transparent 34%),
+    linear-gradient(145deg, #173a5c, #3a6690);
+}
+
+.bubble-content {
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  position: relative;
+}
+
+.bubble-content.bg-golden {
+  background: var(--gradient-brand);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 6px 16px rgba(30, 64, 100, 0.3);
+}
+
+.bubble-content.bg-white {
+  background: var(--surface-glass-strong);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-text);
+  border: 1px solid var(--border-gold-soft);
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 4px 14px rgba(28, 50, 78, 0.08);
+}
+
+.bubble-content p {
+  margin: 0;
+}
+
+.bubble-time {
+  font-size: 10px;
+  opacity: 0.5;
+  display: block;
+  margin-top: 4px;
+  text-align: right;
+}
+
+.bubble-image {
+  display: block;
+  width: min(220px, 64vw);
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 4px 12px rgba(28, 50, 78, 0.12);
+}
+
+.bubble-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.voice-play-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(45, 90, 135, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #2d5a87;
+  padding: 0;
+}
+
+.voice-play-btn:hover {
+  background: rgba(45, 90, 135, 0.14);
+  box-shadow: 0 4px 10px rgba(45, 90, 135, 0.18);
+}
+
+.voice-play-btn:active {
+  transform: scale(0.9);
+  background: rgba(45, 90, 135, 0.15);
+}
+
+.voice-play-btn.playing {
+  background: rgba(45, 90, 135, 0.15);
+  box-shadow: 0 0 0 3px rgba(45, 90, 135, 0.1);
+}
+
+.voice-wave {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 14px;
+}
+
+.voice-wave span {
+  width: 2px;
+  height: 4px;
+  background: #2d5a87;
+  border-radius: 1px;
+  animation: voiceWave 0.6s ease-in-out infinite;
+}
+
+.voice-wave span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.voice-wave span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes voiceWave {
+  0%,
+  100% {
+    height: 4px;
+  }
+  50% {
+    height: 12px;
+  }
+}
+
+.answer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.answer-meta span {
+  font-size: 10px;
+  color: #5b6b8c;
+  background: rgba(45, 90, 135, 0.06);
+  border: 1px solid rgba(45, 90, 135, 0.14);
+  border-radius: 999px;
+  padding: 1px 6px;
+}
+
+.evidence-details {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.evidence-details summary {
+  cursor: pointer;
+  color: #5b6b8c;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.evidence-details summary:hover,
+.source-details summary:hover {
+  color: var(--color-primary);
+}
+
+.evidence-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.evidence-row strong {
+  color: #2d5a87;
+  font-weight: 600;
+}
+
+.source-details {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.source-details summary {
+  cursor: pointer;
+  color: #5b6b8c;
+  font-weight: 600;
+}
+
+.source-item {
+  margin-top: 6px;
+  padding: 6px 0;
+  border-top: 1px solid rgba(184, 150, 96, 0.2);
+}
+
+.source-title {
+  font-weight: 600;
+  color: #374151;
+}
+
+.source-content {
+  margin-top: 2px;
+  color: #667085;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-wave span {
+    animation: none;
+  }
+}

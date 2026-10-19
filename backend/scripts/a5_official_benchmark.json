@@ -1,0 +1,1933 @@
+[
+  {
+    "id": "LS-001",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山大照壁具体位于哪里？",
+    "required_groups": [
+      [
+        "灵山大照壁"
+      ],
+      [
+        "景区入口处",
+        "入口",
+        "核心区"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-002",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山大照壁有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "灵山大照壁"
+      ],
+      [
+        "39.8m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-003",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山大照壁的文化内涵是什么？",
+    "required_groups": [
+      [
+        "灵山大照壁"
+      ],
+      [
+        "赵朴初先生亲笔题写鎏"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-004",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山大照壁最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "灵山大照壁"
+      ],
+      [
+        "打卡合影"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-005",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五明桥具体位于哪里？",
+    "required_groups": [
+      [
+        "五明桥"
+      ],
+      [
+        "大照壁北侧",
+        "入口",
+        "北侧",
+        "香水海"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-006",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五明桥有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "五明桥"
+      ],
+      [
+        "5座"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-007",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五明桥的文化内涵是什么？",
+    "required_groups": [
+      [
+        "五明桥"
+      ],
+      [
+        "佛教中的五种核心智慧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-008",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五明桥最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "五明桥"
+      ],
+      [
+        "漫步过桥"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-009",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛足坛具体位于哪里？",
+    "required_groups": [
+      [
+        "佛足坛"
+      ],
+      [
+        "五明桥北侧",
+        "中轴",
+        "北侧",
+        "菩提大道"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-010",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛足坛有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "佛足坛"
+      ],
+      [
+        "1.2m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-011",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛足坛的文化内涵是什么？",
+    "required_groups": [
+      [
+        "佛足坛"
+      ],
+      [
+        "复刻佛祖释迦牟尼真身"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-012",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛足坛最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "佛足坛"
+      ],
+      [
+        "瞻仰佛足"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-013",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五智门具体位于哪里？",
+    "required_groups": [
+      [
+        "五智门"
+      ],
+      [
+        "佛足坛北侧",
+        "入口",
+        "中轴",
+        "北侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-014",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五智门有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "五智门"
+      ],
+      [
+        "16.8m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-015",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五智门的文化内涵是什么？",
+    "required_groups": [
+      [
+        "五智门"
+      ],
+      [
+        "五门分别象征五方五佛"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-016",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五智门最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "五智门"
+      ],
+      [
+        "穿门祈福"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-017",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "菩提大道具体位于哪里？",
+    "required_groups": [
+      [
+        "菩提大道"
+      ],
+      [
+        "五智门北侧",
+        "中轴",
+        "北侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-018",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "菩提大道有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "菩提大道"
+      ],
+      [
+        "250m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-019",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "菩提大道的文化内涵是什么？",
+    "required_groups": [
+      [
+        "菩提大道"
+      ],
+      [
+        "菩提树为核心景观载体"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-020",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "菩提大道最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "菩提大道"
+      ],
+      [
+        "漫步林荫拱廊"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-021",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴具体位于哪里？",
+    "required_groups": [
+      [
+        "九龙灌浴"
+      ],
+      [
+        "菩提大道北端",
+        "中轴",
+        "菩提大道"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-006",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-022",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "九龙灌浴"
+      ],
+      [
+        "27.2m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-006",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-023",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴的文化内涵是什么？",
+    "required_groups": [
+      [
+        "九龙灌浴"
+      ],
+      [
+        "依据《本行经》中释迦"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-006",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-024",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "九龙灌浴"
+      ],
+      [
+        "观赏动态喷泉表演"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-006",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-025",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "降魔浮雕具体位于哪里？",
+    "required_groups": [
+      [
+        "降魔浮雕"
+      ],
+      [
+        "九龙灌浴北侧",
+        "中轴",
+        "北侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-007",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-026",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "降魔浮雕有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "降魔浮雕"
+      ],
+      [
+        "26m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-007",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-027",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "降魔浮雕的文化内涵是什么？",
+    "required_groups": [
+      [
+        "降魔浮雕"
+      ],
+      [
+        "生动再现佛陀在菩提树"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-007",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-028",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "降魔浮雕最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "降魔浮雕"
+      ],
+      [
+        "观赏精湛的浮雕艺术"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-007",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-029",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "阿育王柱具体位于哪里？",
+    "required_groups": [
+      [
+        "阿育王柱"
+      ],
+      [
+        "降魔浮雕北侧",
+        "中轴",
+        "北侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-008",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-030",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "阿育王柱有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "阿育王柱"
+      ],
+      [
+        "16.9m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-008",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-031",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "阿育王柱的文化内涵是什么？",
+    "required_groups": [
+      [
+        "阿育王柱"
+      ],
+      [
+        "复刻古印度阿育王石柱"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-008",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-032",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "阿育王柱最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "阿育王柱"
+      ],
+      [
+        "瞻仰巨型石柱"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-008",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-033",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "百子戏弥勒具体位于哪里？",
+    "required_groups": [
+      [
+        "百子戏弥勒"
+      ],
+      [
+        "阿育王柱与祥符禅寺之",
+        "中轴"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-009",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-034",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "百子戏弥勒有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "百子戏弥勒"
+      ],
+      [
+        "3m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-009",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-035",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "百子戏弥勒的文化内涵是什么？",
+    "required_groups": [
+      [
+        "百子戏弥勒"
+      ],
+      [
+        "弥勒佛是佛教中的未来"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-009",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-036",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "百子戏弥勒最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "百子戏弥勒"
+      ],
+      [
+        "触摸弥勒佛的肚皮"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-009",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-037",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "祥符禅寺具体位于哪里？",
+    "required_groups": [
+      [
+        "祥符禅寺"
+      ],
+      [
+        "灵山胜境中轴核心",
+        "中轴"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-010",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-038",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "祥符禅寺有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "祥符禅寺"
+      ],
+      [
+        "12.8吨"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-010",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-039",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "祥符禅寺的文化内涵是什么？",
+    "required_groups": [
+      [
+        "祥符禅寺"
+      ],
+      [
+        "始建于唐贞观年间"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-010",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-040",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "祥符禅寺最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "祥符禅寺"
+      ],
+      [
+        "礼佛祈福"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-010",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-041",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山大佛具体位于哪里？",
+    "required_groups": [
+      [
+        "灵山大佛"
+      ],
+      [
+        "祥符禅寺北侧",
+        "南侧",
+        "北侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-011",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-042",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山大佛有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "灵山大佛"
+      ],
+      [
+        "88m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-011",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-043",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛教文化博览馆具体位于哪里？",
+    "required_groups": [
+      [
+        "佛教文化博览馆"
+      ],
+      [
+        "灵山大佛座基内",
+        "入口",
+        "大佛座基"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-012",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-044",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛教文化博览馆有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "佛教文化博览馆"
+      ],
+      [
+        "10000㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-012",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-045",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛教文化博览馆的文化内涵是什么？",
+    "required_groups": [
+      [
+        "佛教文化博览馆"
+      ],
+      [
+        "系统展示五方五佛、中"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-012",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-046",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "佛教文化博览馆最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "佛教文化博览馆"
+      ],
+      [
+        "体验智能导览"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-012",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-047",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山梵宫具体位于哪里？",
+    "required_groups": [
+      [
+        "灵山梵宫"
+      ],
+      [
+        "灵山胜境西侧",
+        "西侧",
+        "香水海"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-013",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-048",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山梵宫有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "灵山梵宫"
+      ],
+      [
+        "72000㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-013",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-049",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山梵宫的文化内涵是什么？",
+    "required_groups": [
+      [
+        "灵山梵宫"
+      ],
+      [
+        "融合中国传统佛教建筑"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-013",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-050",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "灵山梵宫最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "灵山梵宫"
+      ],
+      [
+        "观赏东阳木雕、琉璃、"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-013",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-051",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五印坛城具体位于哪里？",
+    "required_groups": [
+      [
+        "五印坛城"
+      ],
+      [
+        "香水海中央的独立圆岛",
+        "南侧",
+        "香水海"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-014",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-052",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五印坛城有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "五印坛城"
+      ],
+      [
+        "30米"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-014",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-053",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五印坛城的文化内涵是什么？",
+    "required_groups": [
+      [
+        "五印坛城"
+      ],
+      [
+        "“五印”代表五方五佛"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-014",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-054",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "五印坛城最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "五印坛城"
+      ],
+      [
+        "体验藏传佛教文化"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-014",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-055",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "曼飞龙塔具体位于哪里？",
+    "required_groups": [
+      [
+        "曼飞龙塔"
+      ],
+      [
+        "五印坛城北侧",
+        "北侧",
+        "香水海"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-015",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-056",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "曼飞龙塔有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "曼飞龙塔"
+      ],
+      [
+        "16.9m"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-015",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-057",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "曼飞龙塔的文化内涵是什么？",
+    "required_groups": [
+      [
+        "曼飞龙塔"
+      ],
+      [
+        "复刻云南西双版纳景洪"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-015",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-058",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "曼飞龙塔最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "曼飞龙塔"
+      ],
+      [
+        "拍照打卡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-015",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-059",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "无尽意斋具体位于哪里？",
+    "required_groups": [
+      [
+        "无尽意斋"
+      ],
+      [
+        "祥符禅寺西北侧",
+        "北侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-016",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "LS-060",
+    "category": "stable_fact",
+    "scenic_area": "灵山胜境",
+    "question": "无尽意斋有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "无尽意斋"
+      ],
+      [
+        "600㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "LS-016",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-001",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花广场具体位于哪里？",
+    "required_groups": [
+      [
+        "拈花广场"
+      ],
+      [
+        "拈花湾禅意小镇入口核",
+        "入口",
+        "核心区"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-002",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花广场有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "拈花广场"
+      ],
+      [
+        "8000㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-003",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花广场的文化内涵是什么？",
+    "required_groups": [
+      [
+        "拈花广场"
+      ],
+      [
+        "“拈花微笑”为核心文"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-004",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花广场最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "拈花广场"
+      ],
+      [
+        "与“拈花微笑”雕塑打"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-001",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-005",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "梵天花海具体位于哪里？",
+    "required_groups": [
+      [
+        "梵天花海"
+      ],
+      [
+        "拈花湾小镇西侧",
+        "西侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-006",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "梵天花海有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "梵天花海"
+      ],
+      [
+        "30000㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-007",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "梵天花海的文化内涵是什么？",
+    "required_groups": [
+      [
+        "梵天花海"
+      ],
+      [
+        "“花伴禅心”为核心内"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-008",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "梵天花海最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "梵天花海"
+      ],
+      [
+        "四季观赏不同花卉"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-002",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-009",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "香月花街具体位于哪里？",
+    "required_groups": [
+      [
+        "香月花街"
+      ],
+      [
+        "拈花湾小镇核心区域",
+        "中轴",
+        "核心区"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-010",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "香月花街有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "香月花街"
+      ],
+      [
+        "800米"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-011",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "香月花街的文化内涵是什么？",
+    "required_groups": [
+      [
+        "香月花街"
+      ],
+      [
+        "“禅意生活、慢享时光"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-012",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "香月花街最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "香月花街"
+      ],
+      [
+        "逛禅意商铺"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-003",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-013",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花堂具体位于哪里？",
+    "required_groups": [
+      [
+        "拈花堂"
+      ],
+      [
+        "香月花街中段东侧",
+        "东侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-014",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花堂有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "拈花堂"
+      ],
+      [
+        "1200㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-015",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花堂的文化内涵是什么？",
+    "required_groups": [
+      [
+        "拈花堂"
+      ],
+      [
+        "源自佛教“拈花悟禅”"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-016",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "拈花堂最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "拈花堂"
+      ],
+      [
+        "在禅坐区静坐冥想"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-004",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-017",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "五灯湖具体位于哪里？",
+    "required_groups": [
+      [
+        "五灯湖"
+      ],
+      [
+        "拈花湾小镇南侧",
+        "南侧"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-018",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "五灯湖有哪些可核验的建筑或景观参数？",
+    "required_groups": [
+      [
+        "五灯湖"
+      ],
+      [
+        "5000㎡"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-019",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "五灯湖的文化内涵是什么？",
+    "required_groups": [
+      [
+        "五灯湖"
+      ],
+      [
+        "“灯映禅心、湖光禅意"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "NH-020",
+    "category": "stable_fact",
+    "scenic_area": "拈花湾禅意小镇",
+    "question": "五灯湖最值得看的游玩亮点是什么？",
+    "required_groups": [
+      [
+        "五灯湖"
+      ],
+      [
+        "白天漫步木质栈道"
+      ]
+    ],
+    "forbidden": [],
+    "source_spot_id": "NH-005",
+    "source_files": [
+      "灵山胜境 景点结构化数据集.docx"
+    ]
+  },
+  {
+    "id": "CTX-001",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍灵山大佛。",
+      "它的建筑参数是什么？"
+    ],
+    "question": "它的建筑参数是什么？",
+    "required_groups": [
+      [
+        "88"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-002",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍九龙灌浴。",
+      "它表现了什么文化故事？"
+    ],
+    "question": "它表现了什么文化故事？",
+    "required_groups": [
+      [
+        "释迦牟尼",
+        "佛诞",
+        "太子佛"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-003",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍灵山梵宫。",
+      "那里最值得看什么？"
+    ],
+    "question": "那里最值得看什么？",
+    "required_groups": [
+      [
+        "木雕",
+        "星空穹顶",
+        "华藏世界"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-004",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍五印坛城。",
+      "它主要展示哪一类文化？"
+    ],
+    "question": "它主要展示哪一类文化？",
+    "required_groups": [
+      [
+        "藏传佛教"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-005",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍祥符禅寺。",
+      "它的历史可以追溯到什么时候？"
+    ],
+    "question": "它的历史可以追溯到什么时候？",
+    "required_groups": [
+      [
+        "唐",
+        "贞观"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-006",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍阿育王柱。",
+      "它的建筑材质和造型呢？"
+    ],
+    "question": "它的建筑材质和造型呢？",
+    "required_groups": [
+      [
+        "花岗岩"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-007",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍佛足坛。",
+      "它有什么文化内涵？"
+    ],
+    "question": "它有什么文化内涵？",
+    "required_groups": [
+      [
+        "佛足"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-008",
+    "category": "context_followup",
+    "scenic_area": "灵山胜境",
+    "turns": [
+      "请先简要介绍灵山大照壁。",
+      "那里适合看什么？"
+    ],
+    "question": "那里适合看什么？",
+    "required_groups": [
+      [
+        "照壁"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-009",
+    "category": "context_followup",
+    "scenic_area": "拈花湾禅意小镇",
+    "turns": [
+      "请先简要介绍香月花街。",
+      "那里有哪些游玩亮点？"
+    ],
+    "question": "那里有哪些游玩亮点？",
+    "required_groups": [
+      [
+        "花街",
+        "青石板",
+        "禅意商铺"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "CTX-010",
+    "category": "context_followup",
+    "scenic_area": "拈花湾禅意小镇",
+    "turns": [
+      "请先简要介绍拈花塔。",
+      "它的文化寓意是什么？"
+    ],
+    "question": "它的文化寓意是什么？",
+    "required_groups": [
+      [
+        "禅"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": []
+  },
+  {
+    "id": "SAFE-001",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "今天九龙灌浴几点演出？",
+    "required_groups": [
+      [
+        "无法"
+      ],
+      [
+        "400-168-0303"
+      ]
+    ],
+    "forbidden": [
+      "10:35",
+      "11:30"
+    ],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-002",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "灵山胜境今天门票多少钱？",
+    "required_groups": [
+      [
+        "无法"
+      ],
+      [
+        "400-168-0303"
+      ]
+    ],
+    "forbidden": [
+      "210元",
+      "105元"
+    ],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-003",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "现在灵山梵宫开放吗？",
+    "required_groups": [
+      [
+        "无法"
+      ],
+      [
+        "现场公告",
+        "400-168-0303"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-004",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "今日景区几点闭园？",
+    "required_groups": [
+      [
+        "无法"
+      ],
+      [
+        "现场公告",
+        "400-168-0303"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-005",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "今天吉祥颂有哪几场？",
+    "required_groups": [
+      [
+        "无法"
+      ],
+      [
+        "现场公告",
+        "400-168-0303"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-006",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴总高到底是27.2米还是27.5米？",
+    "required_groups": [
+      [
+        "资料"
+      ],
+      [
+        "27.2"
+      ],
+      [
+        "27.5"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-007",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴耗铜180吨和260吨哪个准确？",
+    "required_groups": [
+      [
+        "资料"
+      ],
+      [
+        "180"
+      ],
+      [
+        "260"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-008",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "资料里九龙灌浴参数为什么不一致？",
+    "required_groups": [
+      [
+        "冲突",
+        "不同口径"
+      ],
+      [
+        "未核实",
+        "无法确认"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-009",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "可以直接确认九龙灌浴总高27.5米吗？",
+    "required_groups": [
+      [
+        "不能",
+        "无法"
+      ],
+      [
+        "27.2"
+      ],
+      [
+        "27.5"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  },
+  {
+    "id": "SAFE-010",
+    "category": "dynamic_or_conflict",
+    "scenic_area": "灵山胜境",
+    "question": "九龙灌浴260吨耗铜是确定事实吗？",
+    "required_groups": [
+      [
+        "不能",
+        "无法"
+      ],
+      [
+        "180"
+      ],
+      [
+        "260"
+      ]
+    ],
+    "forbidden": [],
+    "source_files": [],
+    "must_pass": true
+  }
+]

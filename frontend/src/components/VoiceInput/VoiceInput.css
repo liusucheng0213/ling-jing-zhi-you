@@ -1,0 +1,60 @@
+/* 灵境智游视觉升级 - 类型D */
+.voice-input-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 2px solid #2d5a87;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .3s;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(30, 64, 100, 0.14);
+}
+
+.voice-input-btn:not(:disabled):not(.recording):hover {
+  border-color: #5c8aad;
+  box-shadow: var(--shadow-glow-blue), 0 6px 16px rgba(30, 64, 100, 0.2);
+}
+
+.voice-input-btn.recording {
+  background: #ff4d4f;
+  border-color: #ff4d4f;
+  box-shadow: 0 0 0 8px rgba(255, 77, 79, .2);
+  animation: voice-rec-pulse 1.2s ease-in-out infinite;
+}
+
+.voice-input-btn:disabled {
+  cursor: not-allowed;
+  opacity: .45;
+}
+
+.recording-text {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+@keyframes voice-rec-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 6px rgba(255, 77, 79, 0.22);
+  }
+  50% {
+    box-shadow: 0 0 0 11px rgba(255, 77, 79, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voice-input-btn.recording {
+    animation: none;
+  }
+}

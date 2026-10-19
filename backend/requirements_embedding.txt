@@ -1,0 +1,6 @@
+# 本地BGE-M3 embedding生成依赖
+# 用法：
+#   pip install -r requirements_embedding.txt
+# 或在专用embedding worker镜像中安装，避免拖慢API基础镜像。
+sentence-transformers==3.3.0
+torch==2.6.0

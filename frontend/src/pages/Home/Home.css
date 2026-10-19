@@ -1,0 +1,479 @@
+/* 灵境智游视觉升级 - 类型A */
+.home-page {
+  min-height: 100%;
+  padding-bottom: 24px;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .home-page {
+    padding-bottom: 40px;
+  }
+
+  .banner-section {
+    padding: 24px 28px 0;
+  }
+
+  .banner-swiper {
+    height: 300px;
+  }
+
+  /* 页面整体拉伸填满视口：数字人网格占据剩余空间 */
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 50px);
+  }
+
+  .avatar-select-hero {
+    flex: 1 0 auto;
+  }
+
+  .avatar-option-grid {
+    flex: 1;
+    grid-auto-rows: 1fr;
+  }
+
+  .avatar-option-card {
+    min-height: 176px;
+    padding-top: 96px;
+  }
+
+  .banner-text {
+    right: 32px;
+    bottom: 28px;
+    left: 32px;
+  }
+
+  .banner-text h2 {
+    font-size: 32px;
+  }
+
+  .avatar-select-hero {
+    align-items: stretch;
+    padding: 28px;
+    text-align: left;
+  }
+
+  /* 副标题收在品牌名正下方，纵向左对齐排列 */
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .welcome-text h1 {
+    font-size: 36px;
+  }
+
+  .welcome-text .welcome-subtitle {
+    margin-bottom: 0;
+  }
+
+  .welcome-divider {
+    display: none;
+  }
+
+  .avatar-option-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .avatar-option-grid.single {
+    grid-template-columns: 1fr;
+  }
+
+  .avatar-option-grid.single .avatar-option-card {
+    min-height: 142px;
+    padding: 24px 24px 20px 250px;
+  }
+
+  .avatar-option-grid.single .avatar-option-card img,
+  .avatar-option-grid.single .avatar-option-card::after {
+    right: auto;
+    width: 220px;
+    height: 100%;
+    object-position: center 20%;
+  }
+
+  .avatar-option-grid.single .avatar-option-card::after {
+    background: linear-gradient(90deg, transparent 55%, rgba(255, 255, 255, 0.86));
+  }
+
+  .avatar-option-grid.single .avatar-option-mark {
+    top: 20px;
+    left: 194px;
+  }
+
+  .avatar-option-grid.single .avatar-option-card strong {
+    color: var(--color-primary);
+    font-size: 22px;
+    text-shadow: none;
+  }
+
+  .avatar-option-grid.single .avatar-option-card em {
+    color: var(--color-gold-dark);
+    text-shadow: none;
+  }
+
+  .avatar-option-grid.single .avatar-option-card p {
+    max-width: 660px;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    text-shadow: none;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 28px;
+  }
+}
+
+.home-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  background:
+    radial-gradient(420px 200px at 85% 0%, rgba(196, 152, 106, 0.08), transparent 70%),
+    linear-gradient(
+      180deg,
+      rgba(45, 90, 135, 0.09) 0%,
+      transparent 100%
+    );
+  pointer-events: none;
+}
+
+.banner-section {
+  padding: 16px 16px 0;
+}
+
+.banner-swiper {
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 200px;
+  box-shadow: 0 2px 8px rgba(26, 52, 82, 0.14), 0 18px 40px rgba(26, 52, 82, 0.24);
+}
+
+.banner-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68%;
+  background: linear-gradient(to top, rgba(5, 14, 38, 0.84), rgba(5, 14, 38, 0.18) 55%, transparent);
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  color: white;
+}
+
+/* 横幅标题前的金色流光饰条 */
+.banner-text::before {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #e3c08f, #b8935c, #e3c08f);
+  background-size: 200% 100%;
+  animation: gold-shine 3.2s linear infinite;
+}
+
+@keyframes gold-shine {
+  0% { background-position: 0% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-text::before {
+    animation: none;
+  }
+
+  .avatar-option-card img {
+    transition: none;
+  }
+}
+
+.banner-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-text p {
+  font-size: 14px;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-select-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 16px 24px;
+  text-align: center;
+}
+
+.welcome-text h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-logo {
+  height: 52px;
+  width: auto;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 2px 6px rgba(26, 52, 82, 0.22));
+}
+
+.welcome-subtitle {
+  font-size: 14px;
+  color: var(--color-gold-dark);
+  margin-bottom: 12px;
+}
+
+.welcome-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+  margin: 0 auto 12px;
+}
+
+.avatar-option-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.avatar-option-card {
+  position: relative;
+  min-height: 252px;
+  overflow: hidden;
+  padding: 160px 14px 14px;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: var(--surface-glass-strong);
+  text-align: left;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.avatar-option-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 165, 116, 0.6);
+  box-shadow: var(--shadow-float);
+}
+
+.avatar-option-card.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(45, 90, 135, 0.3), 0 16px 36px rgba(30, 64, 100, 0.26),
+    var(--shadow-glow-blue);
+}
+
+/* 角色头图铺满整张卡片 */
+.avatar-option-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  transition: transform var(--transition-normal);
+}
+
+/* 角色卡顶部暖金渐变细线（盖在头图之上） */
+.avatar-option-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 4px;
+  background: var(--gradient-gold);
+  opacity: 0.9;
+}
+
+/* 卡片自身带 overflow:hidden，头图可安全放大 */
+.avatar-option-card:hover img {
+  transform: scale(1.05);
+}
+
+/* 底部渐变遮罩，文字叠在遮罩之上 */
+.avatar-option-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 20, 36, 0) 32%, rgba(10, 20, 36, 0.32) 56%, rgba(8, 16, 32, 0.82) 100%);
+}
+
+.avatar-option-mark {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  z-index: 1;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.avatar-option-card strong,
+.avatar-option-card em,
+.avatar-option-card p {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar-option-card strong {
+  color: #fff;
+  font-size: 17px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.avatar-option-card em {
+  margin-top: 3px;
+  color: var(--color-gold-light);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.avatar-option-card p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 12px;
+  line-height: 1.55;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+}
+
+.feature-card {
+  background: var(--surface-glass-strong);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  font: inherit;
+  transition: all var(--transition-normal);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 165, 116, 0.55);
+  box-shadow: var(--shadow-float), var(--shadow-glow-gold);
+}
+
+.feature-card:focus-visible {
+  outline: 3px solid rgba(45, 90, 135, 0.28);
+  outline-offset: 2px;
+}
+
+.feature-card:active {
+  transform: scale(0.95);
+}
+
+.feature-icon {
+  position: relative;
+  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 6px 14px rgba(30, 58, 92, 0.14);
+  transition: box-shadow var(--transition-normal);
+}
+
+.feature-card:hover .feature-icon {
+  box-shadow: 0 8px 18px rgba(30, 58, 92, 0.24);
+}
+
+/* 图标高光镀层 */
+.feature-icon::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 55%);
+}
+
+.feature-info {
+  text-align: center;
+}
+
+.feature-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+@media (min-width: 1400px) {
+  .avatar-option-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* 高对比度模式：图片卡遮罩转为浅色，保证黑字可读 */
+body.high-contrast .avatar-option-card::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.92) 62%);
+}

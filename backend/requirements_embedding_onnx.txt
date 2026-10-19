@@ -1,0 +1,5 @@
+# 轻量本地BGE-M3 ONNX embedding依赖
+# 比 torch + sentence-transformers 小很多，适合在比赛演示容器中离线生成1024维向量。
+onnxruntime==1.20.1
+tokenizers==0.20.3
+numpy==2.1.0
