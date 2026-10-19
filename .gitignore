@@ -30,9 +30,9 @@ __pycache__/
 *.log
 *.tmp
 
-# 本地 BGE-M3 权重约 2GB，超过 GitHub 单文件 100MB 限制。
-# 需要时把 BAAI/bge-m3 下载到 models/bge-m3。
-models/
+# 只忽略仓库根目录的本地 BGE-M3 权重，约 2GB，超过 GitHub 单文件限制。
+# 需要时把 BAAI/bge-m3 下载到 models/bge-m3。不要写成 models/，否则会误伤 backend/app/models。
+/models/
 
 # 原始 Word/Excel 只在本机重新聚合时使用；规范化结果在 backend/scripts。
 示范景区公开资料包/
