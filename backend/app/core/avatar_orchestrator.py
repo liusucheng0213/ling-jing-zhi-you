@@ -310,17 +310,10 @@ class AvatarOrchestrator:
             "appId": settings.XFYUN_APP_ID,
             "sceneId": settings.XFYUN_AVATAR_SCENE_ID,
         }
-        if settings.XFYUN_AVATAR_EXPOSE_SECRET_TO_FRONTEND:
-            api_info.update(
-                {
-                    "apiKey": settings.XFYUN_API_KEY,
-                    "apiSecret": settings.XFYUN_API_SECRET,
-                }
-            )
-        else:
-            signed_url = self.avatar_client.build_signed_url(server_url)
-            if signed_url:
-                api_info["signedUrl"] = signed_url
+        # 长期 API 密钥只保留在后端；前端仅接收短期签名地址。
+        signed_url = self.avatar_client.build_signed_url(server_url)
+        if signed_url:
+            api_info["signedUrl"] = signed_url
 
         global_params = {
             "stream": {

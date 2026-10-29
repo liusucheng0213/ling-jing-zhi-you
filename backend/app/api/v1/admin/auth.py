@@ -1,3 +1,4 @@
+from secrets import compare_digest
 from uuid import UUID
 
 from fastapi import APIRouter, HTTPException, status
@@ -26,7 +27,16 @@ async def admin_login(payload: AdminLoginRequest):
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="管理员密码未配置，请设置 ADMIN_PASSWORD",
         )
-    if payload.username != settings.ADMIN_USERNAME or payload.password != settings.ADMIN_PASSWORD:
+    if len(settings.JWT_SECRET) < 32:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="JWT_SECRET 未配置或不足 32 个字符",
+        )
+    credentials_valid = compare_digest(payload.username, settings.ADMIN_USERNAME) and compare_digest(
+        payload.password,
+        settings.ADMIN_PASSWORD,
+    )
+    if not credentials_valid:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="用户名或密码错误",
