@@ -63,7 +63,6 @@ class Settings(BaseSettings):
     XFYUN_AVATAR_BITRATE: int = 800000
     XFYUN_AVATAR_VCN: str = "x4_lingxiaoxuan_oral"
     XFYUN_AVATAR_STREAM_PROTOCOL: str = "xrtc"
-    XFYUN_AVATAR_EXPOSE_SECRET_TO_FRONTEND: bool = False
     XFYUN_AVATAR_BACKGROUND_RES_KEY: str = ""
     XFYUN_AVATAR_BACKGROUND_TYPE: str = "res_key"
 
@@ -82,11 +81,16 @@ class Settings(BaseSettings):
     VISION_BASE_URL: str = ""
     VISION_MODEL: str = "qwen3.6-flash-2026-04-16"
     # 安全
-    JWT_SECRET: str = "your-secret-key-change-in-production"
+    JWT_SECRET: str = ""
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRE_HOURS: int = 24
     ADMIN_USERNAME: str = "admin"
     ADMIN_PASSWORD: str = ""
+    ALLOWED_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001"
+
+    @property
+    def allowed_origins(self) -> list[str]:
+        return [origin.strip() for origin in self.ALLOWED_ORIGINS.split(",") if origin.strip()]
 
     class Config:
         env_file = (BACKEND_DIR / ".env", PROJECT_DIR / ".env")
