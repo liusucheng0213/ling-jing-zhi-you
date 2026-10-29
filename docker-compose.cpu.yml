@@ -1,0 +1,30 @@
+services:
+  embedding-worker:
+    build:
+      args:
+        EMBEDDING_BASE_IMAGE: python:3.11-bookworm
+        TORCH_WHEEL_INDEX_URL: https://download.pytorch.org/whl/cpu
+    environment:
+      EMBEDDING_DEVICE: cpu
+      NVIDIA_VISIBLE_DEVICES: "void"
+      NVIDIA_DRIVER_CAPABILITIES: ""
+    gpus: []
+    deploy:
+      resources:
+        reservations:
+          devices: []
+
+  embedding-service:
+    build:
+      args:
+        EMBEDDING_BASE_IMAGE: python:3.11-bookworm
+        TORCH_WHEEL_INDEX_URL: https://download.pytorch.org/whl/cpu
+    environment:
+      EMBEDDING_DEVICE: cpu
+      NVIDIA_VISIBLE_DEVICES: "void"
+      NVIDIA_DRIVER_CAPABILITIES: ""
+    gpus: []
+    deploy:
+      resources:
+        reservations:
+          devices: []

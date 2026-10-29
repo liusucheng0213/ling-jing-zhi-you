@@ -1,3 +1,4 @@
+from pydantic import ValidationInfo, field_validator
 from pydantic_settings import BaseSettings
 from typing import Optional
 from pathlib import Path
@@ -26,7 +27,7 @@ class Settings(BaseSettings):
     VECTOR_DIMENSION: int = 1024  # BGE-M3维度（本地模型）
 
     # LLM（DeepSeek-V4）
-    # TODO: 配置你的 DEEPSEEK_API_KEY，获取方式：https://platform.deepseek.com/
+    # 请配置 DEEPSEEK_API_KEY，获取方式：https://platform.deepseek.com/
     DEEPSEEK_API_KEY: str = ""
     DEEPSEEK_BASE_URL: str = "https://api.deepseek.com/v1"
     DEEPSEEK_MODEL: str = "deepseek-v4-flash"
@@ -39,7 +40,7 @@ class Settings(BaseSettings):
     LLM_TOP_P: float = 1.0
 
     # 讯飞开放平台
-    # TODO: 配置你的 XFYUN_APP_ID、XFYUN_API_KEY、XFYUN_API_SECRET，获取方式：https://console.xfyun.cn/
+    # 请配置 XFYUN_APP_ID、XFYUN_API_KEY、XFYUN_API_SECRET，获取方式：https://console.xfyun.cn/
     XFYUN_APP_ID: str = ""
     XFYUN_API_KEY: str = ""
     XFYUN_API_SECRET: str = ""
@@ -48,14 +49,29 @@ class Settings(BaseSettings):
     XFYUN_TTS_AUE: str = "lame"
     XFYUN_TTS_SAMPLE_RATE: int = 16000
     XFYUN_AVATAR_SERVER_URL: str = "wss://avatar.cn-huadong-1.xf-yun.com/v1/interact"
-    # TODO: 配置你的 XFYUN_AVATAR_SCENE_ID，获取方式：https://www.xfyun.cn/ 虚拟人接口服务
+    # 请配置 XFYUN_AVATAR_SCENE_ID，获取方式：https://www.xfyun.cn/ 虚拟人接口服务
     XFYUN_AVATAR_SCENE_ID: str = ""
-    # 下面五个是未设置环境变量时的形象资源编号回退值，不是密钥。换账号后在 .env 覆盖。
+    # 下面五个是形象资源编号回退值，不是密钥。换账号后在 .env 覆盖。
     XFYUN_AVATAR_LINGXIAOCHAN_ID: str = "111322001"
     XFYUN_AVATAR_WUCHANSHI_ID: str = "111182004"
     XFYUN_AVATAR_XUANZANG_ID: str = "111140001"
     XFYUN_AVATAR_ZHAOPUCHU_ID: str = "111286001"
     XFYUN_AVATAR_XIAOWAN_ID: str = "111259001"
+
+    @field_validator(
+        "XFYUN_AVATAR_LINGXIAOCHAN_ID",
+        "XFYUN_AVATAR_WUCHANSHI_ID",
+        "XFYUN_AVATAR_XUANZANG_ID",
+        "XFYUN_AVATAR_ZHAOPUCHU_ID",
+        "XFYUN_AVATAR_XIAOWAN_ID",
+        mode="before",
+    )
+    @classmethod
+    def use_default_for_blank_avatar_id(cls, value: object, info: ValidationInfo) -> object:
+        if value is None or (isinstance(value, str) and not value.strip()):
+            return cls.model_fields[info.field_name].default
+        return value
+
     XFYUN_AVATAR_LINGXIAOCHAN_VCN: str = "x4_lingxiaoxuan_oral"
     XFYUN_AVATAR_WUCHANSHI_VCN: str = "x4_mingge"
     XFYUN_AVATAR_XUANZANG_VCN: str = "x4_lingfeizhe_oral"
@@ -82,17 +98,17 @@ class Settings(BaseSettings):
 
     # 多模态图片能力（默认关闭；未配置供应商时只返回明确未启用状态）
     VISION_PROVIDER: str = ""
-    # TODO: 配置你的 VISION_API_KEY，获取方式：https://bailian.console.aliyun.com/ 或 https://platform.kimi.com
+    # 请配置 VISION_API_KEY，获取方式：https://bailian.console.aliyun.com/ 或 https://platform.kimi.com
     VISION_API_KEY: str = ""
     VISION_BASE_URL: str = ""
     VISION_MODEL: str = "qwen3.6-flash-2026-04-16"
     # 安全
-    # TODO: 配置你的 JWT_SECRET，获取方式：本地生成随机长字符串，不要把开发默认值用于公网
+    # 请配置 JWT_SECRET，获取方式：本地生成随机长字符串，不要把开发默认值用于公网
     JWT_SECRET: str = "your-secret-key-change-in-production"
     JWT_ALGORITHM: str = "HS256"
     JWT_EXPIRE_HOURS: int = 24
     ADMIN_USERNAME: str = "admin"
-    # TODO: 配置你的 ADMIN_PASSWORD，获取方式：自行设置强密码，只写入根目录 .env
+    # 请配置 ADMIN_PASSWORD，获取方式：自行设置强密码，只写入根目录 .env
     ADMIN_PASSWORD: str = ""
 
     class Config:

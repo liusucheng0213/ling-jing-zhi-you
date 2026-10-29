@@ -10,7 +10,7 @@ import 'antd-mobile/es/global'
 // React 18 根渲染
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>

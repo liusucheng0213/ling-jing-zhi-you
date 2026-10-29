@@ -101,3 +101,7 @@ datasets/
 *.sqlite
 *.sqlite3
 *.db
+
+# 运行期生成的游客上传和数字人预览，不作为固定资源提交。
+backend/app/static/community-images/
+backend/app/static/avatar-previews/

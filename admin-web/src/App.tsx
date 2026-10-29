@@ -34,7 +34,7 @@ function PrivateRoute({ children }: { children: React.ReactNode }) {
  */
 function App() {
   return (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <BrowserRouter>
       <Suspense fallback={<PageLoading />}>
         <Routes>
         {/* 登录页 */}
